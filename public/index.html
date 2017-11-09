@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Canvas</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed|Ubuntu+Mono" rel="stylesheet">
+        <div class="ui">
+            <br>
+            <br>
+            <br>
+            <br>
+            <a class="button red" onclick="makeCoffee()">Make Coffee</a>
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <h2 id="time">It is currently</h2>
+    
+    </head>
+   
+    <body>
+        <script>
+            function clock() {
+                var time = new Date();
+                document.getElementById("time").innerHTML = time;
+                setTimeout(clock, 100);
+            }
+            clock();
+        </script>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

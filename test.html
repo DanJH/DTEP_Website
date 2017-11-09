@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<h1 id="time"></h1>
+<body>
+    <script>
+        function clock() {
+            var time = new Date();
+            var month = time.getMonth();
+            var date = time.getDate();
+            var hour = time.getHours();
+            var minute = time.getMinutes(); 
+            var sec = time.getSeconds();
+            var final = "It is "+month+" on "+date+" at "+hour+":"+minute+":"+second;
+            document.getElementById("time").innerHTML = final;
+            setTimeout(clock, 100);
+        }
+        clock();
+    </script>
+</body>
